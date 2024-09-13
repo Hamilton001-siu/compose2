@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "6e34dc1c-a3f5-4e46-9e40-b2f3c46060a0",
+		"name": "api-students",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22979805"
+	},
+	"item": [
+		{
+			"name": "Nuevo Estudiante",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstname",
+							"value": "Juan",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "Pérez",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "masculino",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "35",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://3.94.185.160:8000/students",
+					"protocol": "http",
+					"host": [
+						"3",
+						"94",
+						"185",
+						"160"
+					],
+					"port": "8000",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Leer Estudiantes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://3.94.185.160:8000/students",
+					"protocol": "http",
+					"host": [
+						"3",
+						"94",
+						"185",
+						"160"
+					],
+					"port": "8000",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Leer 1 estudiante",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://3.94.185.160:8000/student/1",
+					"protocol": "http",
+					"host": [
+						"3",
+						"94",
+						"185",
+						"160"
+					],
+					"port": "8000",
+					"path": [
+						"student",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar 1 Estudiante",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstname",
+							"value": "Geraldo",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "Colchado Ruiz",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "masculino",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "33",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://3.94.185.160:8000/student/1",
+					"protocol": "http",
+					"host": [
+						"3",
+						"94",
+						"185",
+						"160"
+					],
+					"port": "8000",
+					"path": [
+						"student",
+						"1"
+					],
+					"query": [
+						{
+							"key": "firstname",
+							"value": "Juan Francisco",
+							"disabled": true
+						},
+						{
+							"key": "lastname",
+							"value": "Carrasco Segura",
+							"disabled": true
+						},
+						{
+							"key": "gender",
+							"value": "masculino",
+							"disabled": true
+						},
+						{
+							"key": "age",
+							"value": "33",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Estudiante",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://3.94.185.160:8000/student/1",
+					"protocol": "http",
+					"host": [
+						"3",
+						"94",
+						"185",
+						"160"
+					],
+					"port": "8000",
+					"path": [
+						"student",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,15 @@
+services: 
+   api-students:
+     build: ./api-students
+     ports:
+       - 8000:8000
+       
+   websimple:
+     build: ./websimple
+     ports:
+       - 8080:80
+       
+   webplantilla:  # Añadir el nuevo servicio
+     build: ./webplantilla  # Ruta al código de la página web plantilla
+     ports:
+       - 8081:80  # Exponer en el puerto 8081 en el host y mapearlo al puerto 80 del contenedor
